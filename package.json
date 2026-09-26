@@ -1,0 +1,19 @@
+{
+  "name": "deltav-status",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "test": "node --test --test-concurrency=1 test/*.test.js"
+  },
+  "dependencies": {
+    "@fastify/helmet": "^13.0.2",
+    "fastify": "^5.6.0",
+    "pg": "^8.16.3"
+  }
+}
