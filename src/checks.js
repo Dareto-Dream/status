@@ -31,16 +31,11 @@ export const TARGETS = [
   t('robotics.deltavdevs.com', 'robotics', 'FIRST Command'),
   t('clarity.deltavdevs.com', 'Clarity', 'Clarity'),
   t('cdn.clarity.deltavdevs.com', 'Clarity CDN', 'Clarity'),
-  t('mixxy.deltavdevs.com', 'Mixxy', 'Mixxy'),
-  t('api.mixxy.deltavdevs.com', 'Mixxy API', 'Mixxy'),
   t('class.deltavdevs.com', 'ClassPlayer', 'ClassPlayer'),
   t('classapi.deltavdevs.com', 'ClassPlayer API', 'ClassPlayer'),
-  t('play.deltavdevs.com', 'DTgooners site', 'DTgooners'),
-  t('crn.deltavdevs.com', 'DTgooners', 'DTgooners'),
   t('lrc.deltavdevs.com', 'LRC Generator', 'Other projects'),
   t('jarvis.deltavdevs.com', 'jarvis (forwards to www.jarvis)', 'Other projects'),
   t('www.jarvis.deltavdevs.com', 'Jarvis', 'Other projects'),
-  t('china.deltavdevs.com', 'china', 'Other projects'),
 ];
 
 // Plain words for the usual failures; anything else keeps its code.
