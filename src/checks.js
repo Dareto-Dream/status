@@ -83,11 +83,11 @@ export async function statusData() {
         WHERE at >= current_date::timestamp AT TIME ZONE 'UTC' AND NOT EXISTS (SELECT 1 FROM status_daily d WHERE d.day = current_date) GROUP BY 1, 2`),
     // Runs of consecutive failed checks in the last 14 days.
     query(`WITH c AS (SELECT target, at, ok, error, status, sum(CASE WHEN ok THEN 1 ELSE 0 END) OVER (PARTITION BY target ORDER BY at) AS grp
-             FROM status_checks WHERE at > now() - interval '14 days')
+             FROM status_checks WHERE at > now() - interval '14 days' AND target = ANY($1))
       SELECT target, min(at) AS started, max(at) AS last_failed, count(*)::int AS minutes,
         (array_agg(COALESCE(error, 'HTTP ' || status) ORDER BY at))[1] AS reason,
         bool_or(at > now() - interval '3 minutes') AS ongoing
-      FROM c WHERE NOT ok GROUP BY target, grp ORDER BY started DESC LIMIT 50`),
+      FROM c WHERE NOT ok GROUP BY target, grp ORDER BY started DESC LIMIT 50`, [TARGETS.map(x => x.id)]),
   ]);
   const now = new Map(latest.rows.map(r => [r.target, r]));
   const byTarget = new Map();
