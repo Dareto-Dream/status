@@ -14,6 +14,7 @@ export const TARGETS = [
   t('ward.deltavdevs.com', 'Ward (accounts)', 'DeltaVDevs'),
   t('telescreen.deltavdevs.com', 'Telescreen', 'DeltaVDevs'),
   t('analytics.deltavdevs.com', 'Analytics', 'DeltaVDevs'),
+  { ...t('logger.deltavdevs.com', 'Logger', 'DeltaVDevs'), url: 'https://logger.deltavdevs.com/health' },
   { ...t('search.deltavdevs.com', 'Search', 'DeltaVDevs'), url: 'https://search.deltavdevs.com/v1/health' },
   t('cdn.deltavdevs.com', 'CDN', 'DeltaVDevs'),
   t('css.deltavdevs.com', 'Shared styles', 'DeltaVDevs'),
