@@ -1,9 +1,9 @@
-:root { color-scheme: dark; --bg: #1c1a1c; --card: #252226; --line: #6f6a70; --text: #e4dce0; --muted: #b0a9ae; --up: #44bba4; --warn: #d9b800; --down: #e0413a; --none: #46424a; --accent: #eb6841; }
+:root { color-scheme: dark; --bg: #25322f; --card: #2d3d3a; --line: #72978f; --text: #ffffff; --muted: #c0d0cd; --up: #36d9bb; --warn: #d9c036; --down: #d94136; --none: #4c6661; --accent: #57baa7; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 "DM Mono", ui-monospace, SFMono-Regular, Consolas, monospace; }
-a { color: #3f88c5; text-underline-offset: 3px; }
-a:hover { background: #3f88c5; color: #161416; }
-::selection { background: var(--accent); color: #161416; }
+a { color: #8d83cb; text-underline-offset: 3px; }
+a:hover { background: #8d83cb; color: #1e2927; }
+::selection { background: var(--accent); color: #1e2927; }
 .wrap { max-width: 960px; margin: 0 auto; padding: 40px 20px 60px; }
 .top h1 { margin: 0 0 8px; font-size: 28px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -0.03em; }
 .summary { margin: 0; font-size: 18px; font-weight: 600; }
@@ -11,7 +11,7 @@ a:hover { background: #3f88c5; color: #161416; }
 .muted { color: var(--muted); font-size: 13px; }
 .group { margin-top: 28px; }
 .group h2, .outages h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 10px; }
-.site { background: var(--card); border: 2px solid var(--line); box-shadow: 4px 4px 0 #0a090a; padding: 12px 14px; margin-bottom: 8px; display: grid; gap: 8px; }
+.site { background: var(--card); border: 2px solid var(--line); box-shadow: 4px 4px 0 #151c1b; padding: 12px 14px; margin-bottom: 8px; display: grid; gap: 8px; }
 .site .head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap; }
 .site .name { font-weight: 600; }
 .site .host { color: var(--muted); font: 12px ui-monospace, SFMono-Regular, Consolas, monospace; margin-left: 8px; }
