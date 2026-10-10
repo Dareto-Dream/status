@@ -18,6 +18,7 @@ export const TARGETS = [
   { ...t('search.deltavdevs.com', 'Search', 'DeltaVDevs'), url: 'https://search.deltavdevs.com/v1/health' },
   t('cdn.deltavdevs.com', 'CDN', 'DeltaVDevs'),
   t('css.deltavdevs.com', 'Shared styles', 'DeltaVDevs'),
+  { ...t('demo.deltavdevs.com', 'Frontend demo', 'DeltaVDevs'), url: 'https://demo.deltavdevs.com/health' },
   t('forms.deltavdevs.com', 'Forms', 'DeltaVDevs'),
   t('merch.deltavdevs.com', 'Merch', 'DeltaVDevs'),
   t('pay.deltavdevs.com', 'Pay', 'DeltaVDevs'),
