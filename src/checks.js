@@ -1,4 +1,18 @@
 import { query } from './db.js';
+import { announce } from './hooks.js';
+
+// Down only after two failed checks in a row, so one blip doesn't ping anyone; up again once it answers.
+const failing = new Map();
+function watch(target, ok, why) {
+  if (ok) {
+    if (failing.get(target.id) === 'alerted') announce('site.up', `${target.name} is back up`, { Host: target.host });
+    failing.delete(target.id);
+    return;
+  }
+  const seen = failing.get(target.id);
+  if (seen === 'alerted') return;
+  if (seen === 'once') { failing.set(target.id, 'alerted'); announce('site.down', `${target.name} is down`, { Host: target.host, Why: why }); } else failing.set(target.id, 'once');
+}
 
 // Every *.deltavdevs.com hostname, on Railway or not.
 // Up means the server answered with anything below 500 (an API that 404s at /
@@ -65,6 +79,7 @@ export async function checkStatus({ fetcher = fetch, targets = TARGETS } = {}) {
     } catch (err) {
       error = describe(err);
     }
+    watch(target, ok, error || `HTTP ${status}`);
     await query('INSERT INTO status_checks (target, ok, status, latency_ms, error) VALUES ($1, $2, $3, $4, $5)', [target.id, ok, status, Date.now() - started, error]);
   }));
 }
