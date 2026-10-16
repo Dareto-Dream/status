@@ -20,6 +20,7 @@ function watch(target, ok, why) {
 // as up, which is what the GoDaddy forwards are supposed to do.
 const t = (host, name, group) => ({ id: host, host, name, group, url: `https://${host}/` });
 export const TARGETS = [
+  { id: 'dvrev20261016', host: 'dvrev-portfolio-preview.up.railway.app', name: 'Business tools preview', group: 'DeltaVDevs', url: 'https://dvrev-portfolio-preview.up.railway.app/health' },
   t('www.deltavdevs.com', 'Main site', 'DeltaVDevs'),
   t('deltavdevs.com', 'deltavdevs.com (forwards to www)', 'DeltaVDevs'),
   t('blog.deltavdevs.com', 'Blog', 'DeltaVDevs'),
