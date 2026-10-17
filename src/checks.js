@@ -24,7 +24,6 @@ export const TARGETS = [
   t('deltavdevs.com', 'deltavdevs.com (forwards to www)', 'DeltaVDevs'),
   t('blog.deltavdevs.com', 'Blog', 'DeltaVDevs'),
   t('deltatime.deltavdevs.com', 'DeltaTime', 'DeltaVDevs'),
-  t('synthcity.deltavdevs.com', 'Synthcity', 'DeltaVDevs'),
   t('ward.deltavdevs.com', 'Ward (accounts)', 'DeltaVDevs'),
   t('telescreen.deltavdevs.com', 'Telescreen', 'DeltaVDevs'),
   t('analytics.deltavdevs.com', 'Analytics', 'DeltaVDevs'),
@@ -45,14 +44,11 @@ export const TARGETS = [
   t('fc.deltavdevs.com', 'FIRST Command', 'FIRST Command'),
   t('fc-app.deltavdevs.com', 'FIRST Command app', 'FIRST Command'),
   t('fc-cdn.deltavdevs.com', 'FIRST Command CDN', 'FIRST Command'),
-  t('robotics.deltavdevs.com', 'robotics', 'FIRST Command'),
   t('clarity.deltavdevs.com', 'Clarity', 'Clarity'),
   t('cdn.clarity.deltavdevs.com', 'Clarity CDN', 'Clarity'),
   t('class.deltavdevs.com', 'ClassPlayer', 'ClassPlayer'),
   t('classapi.deltavdevs.com', 'ClassPlayer API', 'ClassPlayer'),
   t('lrc.deltavdevs.com', 'LRC Generator', 'Other projects'),
-  t('jarvis.deltavdevs.com', 'jarvis (forwards to www.jarvis)', 'Other projects'),
-  t('www.jarvis.deltavdevs.com', 'Jarvis', 'Other projects'),
 ];
 
 // Plain words for the usual failures; anything else keeps its code.
