@@ -48,7 +48,6 @@ export const TARGETS = [
   t('cdn.clarity.deltavdevs.com', 'Clarity CDN', 'Clarity'),
   t('class.deltavdevs.com', 'ClassPlayer', 'ClassPlayer'),
   t('classapi.deltavdevs.com', 'ClassPlayer API', 'ClassPlayer'),
-  t('lrc.deltavdevs.com', 'LRC Generator', 'Other projects'),
 ];
 
 // Plain words for the usual failures; anything else keeps its code.
